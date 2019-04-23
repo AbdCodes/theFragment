@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else{
             SecondFragment secondFragment=new SecondFragment();
-            fragmentTransaction.add(R.id.fragmentContainer.secondFragment);
+            fragmentTransaction.add(R.id.fragmentContainer,secondFragment);
+            fragmentTransaction.commit();
+            btnFragment.setText("Load First Transaction");
+            status=true;
         }
 
     }
